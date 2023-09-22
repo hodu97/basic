@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.전체 {
+    width: 352px;
+    background-color: #78D6C6;
+    margin: auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.전체 .자식 {
+    width: 104px;
+    height: 104px;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 104px;
+    background-color: #F5FCCD;
+    color: #12486B;
+}
+
+.전체 .첫째 {
+    background-image: url(img/img-1.png);
+    transition: 0.3s;
+}
+
+.전체 .첫째:hover {
+    background-image: url(img/img-2.jpg)
+}
+
+.전체 .둘째 {
+    background-image: url(img/img-2.jpg)
+}
+
+.전체 .둘째::before {
+    content: "before";
+}
+
+.전체 .둘째::after {
+    content: "after";
+}
+
+.전체 .셋째 {
+    margin-right: 0;
+    background-image: url(img/img-3.jpg)
+}
+
+.전체 .약 {
+    clear: both;
+}
+
+/* 전체 끝  */
+
+/* 부모시작 */
+
+/* after--> 인라인요소(글자와 같은 성질)는 공간을 인식하지 못함 */
+
+.치매약::after{
+    content: "";
+background-color: #7aff6d;
+display: block;
+clear: both;
+}
+
+.부모 {
+    background-color: #405acf;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+
+.부모 .child {
+    background-color: #ddceff;
+    width: 33.3333%; float: left;
+}
+
+.부모 .이동 {}
+
+.부모 .삼동 {}
+
+.삼촌{
+    background-color: #405acf;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.삼촌 .child {
+    background-color: #ddceff;
+    width: 33.3333%; float: left;
+}
