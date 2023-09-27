@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.약::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.어떤마을 {
+    background-color: #FAF2D3;
+    padding: 20px;
+}
+
+.어떤마을 .놀부 {
+    background-color: #F4E869;
+    padding: 20px;
+}
+
+.어떤마을 .놀부 .자식 {
+    background-color: #3085C3;
+    float: left;
+}
+
+.어떤마을 .놀부 .자식.하나 {}
+
+.어떤마을 .놀부 .자식.둘 {}
+
+.어떤마을 .놀부 .자식.셋 {}
+
+.어떤마을 .놀부 .자식.넷 {}
+
+.어떤마을 .놀부 .효자 {
+    clear: both;
+}
+
+.어떤마을 .흥부 {
+    background-color: #F4E869;
+    margin-top: 30px;
+    padding: 20px;
+    /* 나의 바깥 공간은 m , 나의 안 공간은 p  */
+}
+
+.어떤마을 .흥부:hover {
+    color: white;
+}
+
+/* ::before,::after는 inline요소(라인안에 포함되어 있는)이다. ->글자와 같은 성질
+inline요소는 공간(넓이,높이) 인식하지 못함.
+
+clear:both는 부모가 공간을 인식하지 못할때 인식할 수 있도록 함.
+단, clear:both는 block요소일때만 실행됨.
+  */
+.어떤마을 .흥부::before {
+    content: "";
+}
+
+.어떤마을 .흥부::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* before밑에 바로 after 그리고 content""필수  */
+
+.어떤마을 .흥부 .자식 {
+    background-color: #3085C3;
+    float: left;
+}
+
+.어떤마을 .흥부 .자식.하나 {}
+
+.어떤마을 .흥부 .자식.둘 {}
+
+.어떤마을 .흥부 .자식.셋 {}
+
+.어떤마을 .흥부 .자식.넷 {}
+
+/* 자식이면서 하나인것은 .뒤에 띄우지말고 붙여쓰기 */
+
+.칠부 {
+    background-color: #D2E0FB;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.칠부 .자식 {
+    background-color: #F9F3CC;
+    float: left;
+}
+
+.칠부 .자식 .하나 {}
+
+.칠부 .자식 .둘 {}
+
+.칠부 .자식 .셋 {}
+
+.칠부 .자식 .넷 {}
