@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.치료::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.전체 {
+    background-color: #D2E0FB;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+/* 첫번째 시작 */
+
+.전체 .첫번째 {
+    background-color: #FACBEA;
+    padding: 20px;
+}
+
+.전체 .첫번째 .자식 {
+    background-color: #FFE4D6;
+    float: left;
+    width: 24.25%;
+    height: 200px;
+    margin-right: 1%;
+}
+
+.전체 .첫번째 .자식.자식1 {
+    position: relative;
+}
+
+.전체 .첫번째 .자식.자식1 .상 {
+    background-color: #9D76C1;
+    width: 100%;
+    /* 부모의 넓이를 100% 차지함 */
+    height: 100%;
+    /* 부모의 높이를 100% 차지함 */
+    background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87335/87335218299_727.jpg");
+    background-size: cover;
+    background-position: centers;
+    transition: 0.3s;
+}
+
+
+.전체 .첫번째 .자식.자식1 .하 {
+    background-color: #713ABE;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87335/87335218297_727.jpg");
+    background-size: cover;
+    background-position: centers;
+    transition: 0.3s;
+
+}
+
+.전체 .첫번째 .자식.자식1 .하:hover {
+    opacity: 0;
+}
+
+.전체 .첫번째 .자식.자식2 {
+    position: relative;
+    background-image: url(https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87407/87407218798_727.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    /* overflow-> 자신보다 넘치는게 있으면 hidden-> 숨겨라 */
+}
+
+.전체 .첫번째 .자식.자식2 .상 {
+    background-color: #8EACCD;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* 자식의 공간만큼만 넓이를 차지 // 넓이를 설정해야된다*/
+    left: 100%;
+    top: 0;
+
+    background-image: url(https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87407/87407218809_727.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+}
+
+/* hover: 마우스를 올리면 이라는 뜻으로 생각하면 됨 */
+
+.전체 .첫번째 .자식.자식2:hover .상 {
+    left: 0;
+}
+
+.전체 .첫번째 .자식.자식3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.전체 .첫번째 .자식.자식3 .yt {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(x값,y값);%의 기준이 자기자신 scale 1-> 100 */
+    transform: translate(-50%, -50%)scale(1.4);
+   
+
+}
+
+
+
+.전체 .첫번째 .자식.자식4 {
+    margin-right: 0;
+}
+
+/* 첫번째 끝  */
+
+/* 두번째 시작 */
+
+.전체 .두번째 {
+    background-color: #D988B9;
+}
+
+.전체 .두번째 .자식 {}
+
+.전체 .두번째 .자식.자식1 {}
+
+.전체 .두번째 .자식.자식2 {}
+
+.전체 .두번째 .자식.자식3 {}
+
+.전체 .두번째 .자식.자식4 {}
+
+/* 두번째 끝 */
