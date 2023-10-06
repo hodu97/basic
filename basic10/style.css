@@ -1,0 +1,105 @@
+@charset "UTF -8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.깨짐현상방지::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#전체 {
+    /*  (id) 아이디를 호출하는 방법
+    아이디는 전체 사이트에 유일한 이름이어야한다.
+    아이디는 하나의 이름만 가져야 한다. */
+
+    background-color: #F11A7B;
+    width: 1000px;
+    /* margin: 상하 좌우; */
+    margin: 30px auto 0;
+    /* 위 좌우 아래  */
+    /*  margin: 0 auto;은 다음과 같다.
+    /* margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; */
+
+}
+
+#전체 .놀부 {
+    padding: 20px;
+}
+
+#전체 .놀부 .자식 {
+    width: 23.5%;
+    background-color: #F9F3CC;
+    float: left;
+    margin-right: 2%;
+}
+
+#전체 .놀부 .자식1 {}
+
+#전체 .놀부 .자식1 img {
+    width: 100%;
+    vertical-align: middle;
+    /* 이미지는 인라인 요소 이미지 공간 외 다른 공간 생길수 있음 */
+}
+
+#전체 .놀부 .자식2 {
+    /*     공간의 넓이 = padding-left + border-left: + width + padding-right: +border-right:;
+    공간의 높이 = padding-top + border-top : + height + padding-bottom: +border-bottom:;
+    공간의 넓이 = 10px + 5px + 25% + 10px + 5px
+    공간의 높이 = 10px + 5px + 자식의 높이 + 10px + 5px */
+    padding: 10px;
+    border: 5px solid purple;
+    box-sizing: border-box;
+}
+
+#전체 .놀부 .자식3 {
+    height: 200px;
+    background-image: url(https://www.snu.ac.kr/webdata/uploads/kor/image/2020/01/about-symbold-logo-people_sm.png);
+    background-size: contain;
+    /* 이미지 크기 조절 */
+    background-repeat: no-repeat;
+    /* 이미지 반복 */
+    background-position: 20px center;
+    /* x축 y축 --값이 같을때 단축가능 */
+
+}
+
+#전체 .놀부 .자식4 {
+    position: relative;
+    margin-right: 0;
+    height: 200px;
+    background-image: url(https://i.ytimg.com/vi/7Y_C6YyIwaI/maxresdefault.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+}
+
+#전체 .놀부 .자식4 .text {
+    background-color: #BEADFA;
+    position: absolute;
+    left: 50%;
+    /* 부모의 넓이 */
+    top: +100%;
+    /* 부모의 높이 */
+    /* transform: translate(x축 y축); */
+    transform: translate(-50%, -50%);
+    /* %(백분율)기준.text 자신 */
+    padding: 10px 30px;
+    border-radius: 10px;
+    /* 반지름의 기준 */
+    opacity: 0;
+    color: #fff;
+    transition: 0.2s;
+}
+
+#전체 .놀부 .자식4:hover .text{
+    opacity: 1;
+    top: 50%;
+}
