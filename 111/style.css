@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-size: 16px 기본 값; */
+    font-size: 14px;
+
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* reset */
+li {
+    list-style: none;
+    /* 블릿문자 삭제 */
+}
+
+a {
+    color: #444;
+    /* 글자색 */
+    text-decoration: none;
+    /* 밑줄삭제 */
+}
+
+/* wrap */
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {}
+
+#header h1 {
+    float: left;
+    width: 120px;
+}
+
+#header h1 a img {
+    width: 100px;
+}
+
+#header .nav {
+    float: right;
+    text-align: center;
+    /* 자식요소 중 인라인요소를 가운데 정렬 */
+    margin-top: 20px;
+}
+
+#header .nav ul {}
+
+#header .nav ul li {
+    position: relative;
+    float: left;
+    width: 120px;
+}
+
+#header .nav ul li a {
+    /* 인라인요소 */
+    background-color: #ccc;
+    display: block;
+    padding: 20px 15px;
+    transition: 0.3s;
+    /* 1000ms->1s 300ms->0.3s */
+}
+
+#header .nav ul li a:hover {
+    background-color: #ddd;
+}
+
+#header .nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10; /* position이 있어야 실행 */;
+}
+
+/* banner */
+#banner {
+    height: 378px;
+    overflow: hidden;
+}
+
+#banner .slidelist {}
+
+#banner .slidelist .slideimg {
+    position: relative;
+}
+
+#banner .slidelist .slideimg h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #fff;
+
+}
+
+#banner .slidelist .slideimg img {
+
+    /* img 태그 특징
+    인라인요소 -> 에측하지 못하는 공간을 가지고 있음
+    해결방법2가지 
+    1. display: block;
+    2. vertical-align: top; */
+    vertical-align: top;
+    width: 100%;
+}
